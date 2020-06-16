@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "jest --watchAll --verbose",
-    "start": "node app.js"
+    "start": "set NODE_ENV=development&& node app.js",
+    "start-prod": "set NODE_ENV=production&& node app.js"
   },
   "engines": {
     "node": "8.11.0"
