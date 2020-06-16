@@ -76,6 +76,7 @@ socket.on("connection", socket => {
 
 
 //wire up the server to listen to our port 500
+const port = process.env.PORT || 3000;
 http.listen(port, () => {
     console.log(`connected to port:${port}`)
 });
