@@ -32,7 +32,6 @@ const http = require('http').Server(app)
 // require the socket.io module
 const io = require('socket.io');
 
-const port = 5000;
 
 const socket = io(http);
 //create an event listener
@@ -75,8 +74,10 @@ socket.on("connection", socket => {
 });
 
 
+
+
 //wire up the server to listen to our port 500
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 http.listen(port, () => {
     console.log(`connected to port:${port}`)
 });
