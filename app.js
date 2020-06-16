@@ -1,6 +1,7 @@
 //Require the express moule
 const express = require('express');
 const cors = require('cors')
+const config = require('config')
 const connect = require('./dbconnection');
 const Chat = require('./models/ChatSchema');
 const bodyParser = require("body-parser");
@@ -8,6 +9,7 @@ const chatRoute = require('./routes/chat');
 const app = express()
 
 
+require('./prod')(app)
 
 //bodyparser middleware
 app.use(bodyParser.json());
